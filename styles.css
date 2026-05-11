@@ -1,5 +1,3 @@
-/* body */
-html,
 html,
 body {
     height: 100%;
@@ -14,7 +12,8 @@ body {
     font-weight: 100;
 }
 
-/* hero image overlay text */
+
+/* Hero image overlay text */
 .hero-text-overlay {
     position: absolute;
     top: 32%;
@@ -51,7 +50,8 @@ body {
     }
 }
 
-/* navigation bar */
+
+/* Navigation bar */
 .container {
     width: 640px;
     max-width: 100%;
@@ -59,7 +59,8 @@ body {
     padding: 0 1rem;
 }
 
-/* hero image */
+
+/* Hero image */
 .hero-image-wrapper {
     position: relative;
     width: 100vw;
@@ -239,7 +240,7 @@ body {
         box-shadow: none;
         border-radius: 0;
         z-index: 1001;
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(255, 255, 255);
     }
 
     .hero-image-wrapper {
@@ -454,7 +455,7 @@ body {
     font-weight: 300;
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
-    margin-right: 5.5rem;
+
 }
 
 @media (max-width: 900px) {
