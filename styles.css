@@ -1,8 +1,123 @@
+/* Feedback Section */
+.feedback-section {
+    background: #fff;
+    padding: 2.5rem 0 3rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Feedback title, aligned with feedback text */
+.feedback-title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1.2rem;
+    color: #333;
+    font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    max-width: 865px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.feedback-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1.1rem;
+    max-width: 865px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    box-sizing: border-box;
+    margin-top: 0.2rem;
+}
+
+/* Feedback Card Styling */
+.feedback-card {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    max-width: 350px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+
+.feedback-text {
+    font-size: 0.8rem;
+    color: #222;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.feedback-client {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: auto;
+}
+
+.feedback-img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: none;
+    background: #eaeaea;
+}
+
+.feedback-name {
+    font-size: 1rem;
+    color: #222;
+    font-weight: 400;
+    font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.01em;
+}
+
+.feedback-name {
+    font-size: 0.85rem;
+    color: #222;
+    font-weight: 400;
+    font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.01em;
+}
+
+@media (max-width: 1100px) {
+    .feedback-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .feedback-title {
+        text-align: left;
+        margin-right: 0;
+        margin-left: auto;
+        padding-left: 1.5rem;
+        max-width: 100%;
+    }
+}
+
 /* Services Section */
 .services-section {
     background: #eaf1f6;
     position: relative;
-    padding: 4.5rem 0;
+    padding: 4rem 0;
     margin: 0;
     width: 100%;
     z-index: 1;
@@ -126,13 +241,11 @@
     font-size: 1.2em;
 }
 
-
-
-@media (max-width: 900px) {
-
-    .services-section h2,
-    .services-subtitle {
-        padding-left: 0.5rem;
+@media (max-width: 1100px) {
+    .feedback-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
         margin-left: auto;
         margin-right: auto;
     }
