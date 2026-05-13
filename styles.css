@@ -9,8 +9,6 @@
     align-items: center;
 }
 
-
-/* Feedback title, aligned with feedback text */
 .feedback-title {
     font-size: 2.2rem;
     font-weight: 400;
@@ -39,7 +37,6 @@
     margin-top: 0.2rem;
 }
 
-/* Feedback Card Styling */
 .feedback-card {
     background: none;
     box-shadow: none;
@@ -123,7 +120,6 @@
     z-index: 1;
 }
 
-
 .services-section h2,
 .services-subtitle {
     max-width: 900px;
@@ -134,14 +130,12 @@
     margin-top: 0;
 }
 
-
 .services-section h2 {
     font-size: 2.2rem;
     font-weight: 400;
     margin-bottom: 1.2rem;
     color: #333;
 }
-
 
 .services-subtitle {
     font-size: 1.1rem;
@@ -164,8 +158,8 @@
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.07);
     display: flex;
     align-items: center;
-    gap: 1.2rem;
-    padding: 1.2rem 1.5rem;
+    gap: 0.6rem;
+    padding: 0.8rem 0.8rem;
     transition: box-shadow 0.2s;
 }
 
@@ -174,16 +168,17 @@
 }
 
 .service-img {
-    width: 140px;
-    height: 100px;
+    width: 210px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 2px;
     flex-shrink: 0;
 }
 
 .service-info {
     flex: 1;
     text-align: left;
+    margin-left: 2rem;
 }
 
 .service-title {
@@ -276,7 +271,7 @@
     }
 }
 
-/* Main body text section */
+/* main body text section */
 .main-body-text {
     padding: 0 1.5rem;
     text-align: center;
@@ -335,7 +330,7 @@ body {
     font-weight: 100;
 }
 
-/* Hero image overlay text */
+/* hero image overlay text */
 .hero-text-overlay {
     position: absolute;
     top: 32%;
@@ -378,7 +373,7 @@ body {
     }
 }
 
-/* Navigation bar */
+/* navigation bar */
 .container {
     width: 640px;
     max-width: 100%;
@@ -386,7 +381,7 @@ body {
     padding: 0 1rem;
 }
 
-/* Hero image */
+/* hero image */
 .hero-image-wrapper {
     position: relative;
     width: 100%;
@@ -838,4 +833,49 @@ body {
         flex-direction: column;
         gap: 0.7rem;
     }
+}
+
+.see-more-arrow {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0;
+    transition: stroke 0.2s;
+}
+
+
+.see-more-btn,
+.services-more-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 260px;
+    max-width: 100%;
+    min-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1.5px solid #002699;
+    background: #fff;
+    color: #333333;
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    justify-content: center;
+    padding: 0.85rem 2.5rem;
+}
+
+.see-more-arrow-wrapper {
+    position: absolute;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: auto;
+}
+
+
+.services-more-btn:hover .see-more-arrow,
+.see-more-btn:hover .see-more-arrow {
+    stroke: #fff !important;
 }
