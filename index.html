@@ -21,15 +21,15 @@
         <button class="navbar-toggle" aria-label="Toggle navigation"
             onclick="document.querySelector('.navbar-links').classList.toggle('active')">&#9776;</button>
         <ul class="navbar-links">
-            <li><a href="#">Top</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#">FI/EN</a></li>
         </ul>
-        <a href="#" class="navbar-contact">Contact</a>
+        <a href="#contact" class="navbar-contact">Contact</a>
     </nav>
 
-    <div class="hero-image-wrapper">
+    <div class="hero-image-wrapper" id="top">
         <img src="picture.png" alt="Top Image" class="hero-image">
         <div class="hero-text-overlay">
             <span>Average and<br>Survey Agency<br>in Finland</span>
@@ -41,18 +41,17 @@
             <button class="navbar-toggle" aria-label="Toggle navigation"
                 onclick="document.querySelector('.navbar-links').classList.toggle('active')">&#9776;</button>
             <ul class="navbar-links">
-                <li><a href="#">Top</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="#top">Top</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#">FI/EN</a></li>
             </ul>
-            <a href="#" class="navbar-contact">Contact</a>
+            <a href="#contact" class="navbar-contact">Contact</a>
         </nav>
     </div>
 
-
     <!-- Main body text section -->
-    <div class="main-body-text">
+    <div class="main-body-text" id="about">
         <h1>We survey to<br> secure your credibility</h1>
         <p>
             Verus Nordica is<br>an average and survey agency<br>
@@ -72,7 +71,7 @@
     </div>
 
     <!-- Services Section -->
-    <section class="services-section">
+    <section class="services-section" id="services">
         <h2>Services</h2>
         <p class="services-subtitle">Experienced professionals offer a wide range of average and survey agency
             services.</p>
@@ -120,10 +119,9 @@
         </div>
     </section>
 
-
     <!-- Client's Feedback Section -->
     <section class="feedback-section">
-        <h2 class="feedback-title">Client’s Feedback</h2>
+        <h2 class="feedback-title">Client’s <span class="mobile-br"><br></span>Feedback</h2>
         <div class="feedback-list">
             <div class="feedback-card">
                 <p class="feedback-text">I had been customer of Verus Nordica<br> over 10 years. I really appreciate
@@ -152,8 +150,7 @@
         </div>
     </section>
 
-
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="footer-content">
             <div class="footer-left">
                 <div class="footer-brand">
@@ -170,10 +167,10 @@
                     </div>
                 </div>
                 <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
