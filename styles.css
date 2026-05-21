@@ -202,9 +202,11 @@ html {
     }
 
     .feedback-text {
-        max-width: 98vw !important;
+        max-width: 100vw !important;
         width: 100% !important;
-        word-break: break-word;
+        word-break: normal;
+        white-space: normal;
+        hyphens: auto;
     }
 
     .hero-text-overlay {
@@ -598,8 +600,8 @@ html {
 }
 
 .feedback-img {
-    width: 54px;
-    height: 54px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     object-fit: cover;
     border: none;
@@ -1035,7 +1037,7 @@ body {
 .navbar {
     height: 55px;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -1059,7 +1061,7 @@ body {
     transform: translateX(-50%);
     width: 100%;
     max-width: 530px;
-    z-index: 10;
+    z-index: 1000;
     margin-top: 0;
 }
 
