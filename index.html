@@ -14,6 +14,15 @@
 
 <body class="body-main">
 
+    <!-- Static mobile top bar -->
+    <div class="mobile-top-bar">
+        <span class="mobile-brand">
+            <img src="logo.png" alt="Logo Icon" class="logo-img"> <span class="brand-poppins">Verus Nordica</span>
+        </span>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation"
+            onclick="document.querySelector('.navbar-links').classList.toggle('active')">&#9776;</button>
+    </div>
+
     <!-- Single navbar at the top -->
     <nav class="navbar">
         <span class="navbar-brand"><img src="logo.png" alt="Logo Icon" class="logo-img"> <span
@@ -32,8 +41,7 @@
     <div class="hero-image-wrapper" id="top">
         <img src="picture.png" alt="Top Image" class="hero-image">
         <div class="hero-text-overlay">
-            <span
-                class="hero-text">
+            <span class="hero-text">
                 Average and<br>Survey Agency<br>in Finland
             </span>
         </div>
