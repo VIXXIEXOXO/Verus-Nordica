@@ -4,8 +4,10 @@
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     width: 100vw;
     z-index: 2001;
+    /* Ensure it stays above all content */
 }
 
 @media (max-width: 770px) {
@@ -100,6 +102,12 @@ html {
     align-items: center;
     gap: 0.4em;
 }
+    /* Mobile-specific footer-brand margin */
+    @media (max-width: 600px) {
+        .footer-brand {
+            margin-left: rem !important;
+        }
+    }
 
 .footer-logo-img {
     height: 1.5em;
@@ -108,6 +116,14 @@ html {
 
 .footer-brand-white {
     color: white;
+}
+
+@media (max-width: 770px) {
+    p {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Hide mobile nav by default, show only on mobile */
@@ -120,14 +136,16 @@ html {
 
 @media (max-width: 770px) {
     .footer-content {
-        justify-content: flex-start;
-        align-items: flex-start;
-        text-align: left;
-        padding-left: 1.2rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
     }
 
     .footer-left {
         align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .footer-links {
@@ -137,11 +155,18 @@ html {
         justify-content: center !important;
         width: 100%;
         padding: 0;
-        margin: 0.7rem 0 0.2rem 0;
+        margin: 0.2rem 0 0.2rem 0;
     }
 
     .footer-links li {
         margin: 0;
+    }
+
+    .footer-brand {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
     }
 
     .navbar {
@@ -221,6 +246,14 @@ html {
 
 /* Hide mobile line break by default (desktop/tablet) */
 .mobile-br {
+/* Mobile: main-body-text p max-width 80% */
+@media (max-width: 770px) {
+    .main-body-text p {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
     display: none;
 }
 
@@ -365,6 +398,7 @@ html {
         align-items: center;
         text-align: left;
         width: 100%;
+        margin-left: 5rem;
     }
 
     .footer-info-wrapper {
@@ -394,7 +428,7 @@ html {
         content: "";
         display: block;
         width: 95%;
-        height: 1px;
+        height: 1.5px;
         background: #eaf1f6;
         margin: 2rem auto 2rem auto;
         border-radius: 1px;
@@ -463,7 +497,7 @@ html {
     .footer-left {
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
+        gap: 1.5rem;
     }
 
     .footer-info-wrapper {
@@ -613,10 +647,10 @@ html {
 
     .hero-text-overlay {
         position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
+        top: 55% !important;
+        left: 32% !important;
         transform: translate(-50%, -50%) !important;
-        width: 90vw !important;
+        width: 60vw !important;
         max-width: 98vw !important;
         text-align: center !important;
         padding: 0 2vw !important;
@@ -626,9 +660,9 @@ html {
     }
 
     .hero-text-overlay span {
-        font-size: clamp(1.1rem, 7vw, 2rem) !important;
+        font-size: clamp(2rem, 9vw, 2.8rem) !important;
         padding: 0.5em 0.5em !important;
-        text-align: center !important;
+        text-align: left !important;
         color: #fff !important;
         text-shadow: 0 2px 8px rgba(51, 51, 51, 0.3), 0 1px 2px rgba(51, 51, 51, 0.2) !important;
     }
@@ -875,7 +909,7 @@ html {
 
     .services-list {
         padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-right: 0.8rem;
     }
 
     .feedback-list {
@@ -980,7 +1014,7 @@ html {
     font-weight: 400;
     line-height: 1.6;
     margin: 0 auto;
-    max-width: 95%;
+    max-width: 100%;
     margin-bottom: 2rem;
 }
 
@@ -1001,9 +1035,9 @@ body {
 /* hero image overlay text */
 .hero-text-overlay {
     position: absolute;
-    top: 32%;
+    top: 30%;
     left: 30vw;
-    transform: translateX(-20%);
+    transform: translateX(-15%);
     width: 60vw;
     text-align: left;
     max-width: 700px;
@@ -1015,7 +1049,7 @@ body {
     display: inline-block;
     color: #fff;
     font-size: clamp(2rem, 4vw, 3.5rem);
-    font-weight: 500;
+    font-weight: 600;
     padding: 0.2em 0.5em;
     text-align: left;
     word-break: break-word;
@@ -1461,11 +1495,19 @@ body {
     align-items: flex-start;
 }
 
+
 .footer-info {
     font-size: 0.75rem;
     color: #ffffff;
     line-height: 1.6;
     margin: 0;
+}
+
+/* Mobile-specific footer-info margin */
+@media (max-width: 600px) {
+    .footer-info {
+        margin: 0.2rem 0 1.5rem 4.5rem !important;
+    }
 }
 
 .footer-center {
