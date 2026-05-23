@@ -15,7 +15,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 92vw;
@@ -760,14 +760,16 @@ html {
     z-index: 1;
 }
 
+
 .services-section h2,
 .services-subtitle {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    padding-left: 1.5rem;
     margin-top: 0;
+    box-sizing: border-box;
+    padding-left: 0.8rem;
 }
 
 .services-section h2 {
