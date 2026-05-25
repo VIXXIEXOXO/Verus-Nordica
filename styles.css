@@ -1,3 +1,95 @@
+/* ===== Mobile Navigation Overlay (Full Screen Blue) ===== */
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 42, 176, 0.92);
+    /* semi-transparent blue */
+    z-index: 3000;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.mobile-nav-overlay.active {
+    display: flex;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-nav-content {
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-shadow: none;
+    animation: none;
+}
+
+.mobile-nav-close {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0.7rem;
+    right: 1.1rem;
+    cursor: pointer;
+    z-index: 3100;
+    padding: 0.35rem 0 1.3rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 52px;
+}
+
+.mobile-nav-close svg {
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif;
+    font-weight: 350;
+    letter-spacing: 0.01em;
+    padding: 0.7rem 2.5rem;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+    text-align: center;
+}
+
+.mobile-nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #e0e6ff;
+}
+
+@media (min-width: 771px) {
+    .mobile-nav-overlay {
+        display: none !important;
+    }
+}
+
 /* ===== Static Mobile Top Bar ===== */
 .mobile-top-bar {
     display: none;
@@ -248,16 +340,6 @@ html {
 
 /* Hide mobile line break by default (desktop/tablet) */
 .mobile-br {
-
-    /* Mobile: main-body-text p max-width 80% */
-    @media (max-width: 770px) {
-        .main-body-text p {
-            max-width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
     display: none;
 }
 
@@ -265,6 +347,7 @@ html {
 #about {
     scroll-margin-top: 100px;
 }
+
 
 @media (max-width: 600px) {
     p {
@@ -1256,6 +1339,7 @@ body {
 .navbar-brand {
     font-weight: 700;
     font-size: 1rem;
+    margin-top: 0.3rem;
 }
 
 .navbar-links {
