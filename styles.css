@@ -1,3 +1,93 @@
+/* Make send-message arrow white on hover */
+.send-message-btn:hover .see-more-arrow {
+    stroke: #fff !important;
+}
+
+/* ================= CONTACT PAGE RESPONSIVE STYLES ================= */
+@media (max-width: 770px) {
+    .contact-section {
+        padding: 80px 0 40px 0 !important;
+        max-width: 98vw !important;
+        margin: 0 1vw !important;
+    }
+
+    .contact-form {
+        padding: 1rem !important;
+        gap: 0.8rem !important;
+    }
+
+    .contact-form>div[style*="display: flex;"][style*="gap: 1rem;"] {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.98rem !important;
+        padding: 0.6rem !important;
+        font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif !important;
+    }
+
+    .send-message-btn {
+        min-width: 180px !important;
+        width: 100%;
+        font-size: 1rem !important;
+        padding: 0.7rem 1.2rem !important;
+    }
+
+    .contact-section h1 {
+        font-size: 1.5rem !important;
+        text-align: center;
+    }
+
+    .contact-section p {
+        font-size: 1rem !important;
+        text-align: center;
+        width: 95vw !important;
+        margin: 0 auto 1.2rem auto !important;
+    }
+}
+
+@media (max-width: 430px) {
+    .contact-section {
+        padding: 60px 0 20px 0 !important;
+    }
+
+    .contact-form {
+        padding: 0.5rem !important;
+    }
+
+    .send-message-btn {
+        min-width: 120px !important;
+        font-size: 0.95rem !important;
+    }
+
+    .contact-section h1 {
+        font-size: 1.1rem !important;
+    }
+}
+
+.send-message-btn {
+    display: inline-block;
+    min-width: 260px;
+    margin: 0 auto 0 auto;
+    padding: 0.85rem 2.5rem;
+    background: #fff;
+    color: #333333;
+    border: 1.5px solid #002699;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.send-message-btn:hover {
+    background: #002699;
+    color: #fff;
+}
+
 /* ===== Mobile Navigation Overlay (Full Screen Blue) ===== */
 .mobile-nav-overlay {
     display: none;
@@ -1404,6 +1494,15 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
 }
 
 /* responsive navigation bar */
@@ -1708,9 +1807,9 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    width: 260px;
+    width: 170px;
     max-width: 100%;
-    min-width: 220px;
+    min-width: 170px;
     margin-left: auto;
     margin-right: auto;
     border: 1.5px solid #002699;
