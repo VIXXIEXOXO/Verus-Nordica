@@ -1,3 +1,8 @@
+/* Ensure main content grows to fill space so footer stays at bottom */
+.contact-main {
+    flex: 1 0 auto;
+}
+
 /* Make send-message arrow white on hover */
 .send-message-btn:hover .see-more-arrow {
     stroke: #fff !important;
@@ -23,7 +28,7 @@
 
     .contact-form input,
     .contact-form textarea {
-        font-size: 0.98rem !important;
+        font-size: 1rem !important;
         padding: 0.6rem !important;
         font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif !important;
     }
@@ -36,13 +41,13 @@
     }
 
     .contact-section h1 {
-        font-size: 1.5rem !important;
+        font-size: clamp(2rem, 9vw, 2.8rem) !important;
         text-align: center;
     }
 
     .contact-section p {
         font-size: 1rem !important;
-        text-align: center;
+        text-align: left !important;
         width: 95vw !important;
         margin: 0 auto 1.2rem auto !important;
     }
@@ -58,18 +63,38 @@
     }
 
     .send-message-btn {
-        min-width: 120px !important;
-        font-size: 0.95rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        width: 170px !important;
+        min-width: 170px !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        border: 1.5px solid #002699 !important;
+        background: #fff !important;
+        color: #333333 !important;
+        font-size: 0.7rem !important;
+        font-weight: 500 !important;
+        font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif !important;
+        cursor: pointer !important;
+        transition: background 0.2s, color 0.2s !important;
+        padding: 0.85rem 2.5rem !important;
+        box-sizing: border-box !important;
+        border-radius: 3px !important;
     }
 
     .contact-section h1 {
-        font-size: 1.1rem !important;
+        font-size: clamp(2rem, 9vw, 2.8rem) !important;
     }
 }
 
+
 .send-message-btn {
-    display: inline-block;
-    min-width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto 0 auto;
     padding: 0.85rem 2.5rem;
     background: #fff;
@@ -81,6 +106,7 @@
     font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
+    position: relative;
 }
 
 .send-message-btn:hover {
@@ -245,12 +271,18 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
+}
 }
 
 /* Body main color */
-.body-main {
+body.body-main {
     color: #333333;
     font-family: 'Poppins', 'Inter', Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 }
 
 /* Center main about text as in reference image */
@@ -547,12 +579,13 @@ html {
         text-align: left !important;
     }
 
-    .footer {
+    footer.footer {
         width: 100vw;
         max-width: 100vw;
         border-radius: 0;
         padding-left: 0;
         padding-right: 0;
+        margin-top: auto;
     }
 
     .footer-content {
@@ -613,6 +646,19 @@ html {
 }
 
 @media (max-width: 700px) {
+    .send-message-btn {
+        width: 170px;
+        min-width: 170px;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.85rem 2.5rem;
+        font-size: 0.7rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .service-card {
         flex-direction: column;
         align-items: flex-start;
@@ -1827,6 +1873,8 @@ main {
 .see-more-arrow-wrapper {
     position: absolute;
     right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     height: 100%;
