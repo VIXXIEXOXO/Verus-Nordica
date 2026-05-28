@@ -1,4 +1,3 @@
-
 /*
 ====================================================
  Verus-Nordica Main Stylesheet
@@ -439,24 +438,26 @@ body {
 
 /* ===== Mobile Navigation Overlay (Full Screen Blue) ===== */
 .mobile-nav-overlay {
-    display: none !important;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background: rgba(30, 42, 176, 0.92);
-    /* semi-transparent blue */
     z-index: 3000;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-nav-overlay.active {
-    display: flex;
     opacity: 1;
-    align-items: center;
-    justify-content: center;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .mobile-nav-content {

@@ -20,79 +20,160 @@
         <span class="mobile-brand">
             <img src="logo.png" alt="Logo Icon" class="logo-img"> <span class="brand-poppins">Verus Nordica</span>
         </span>
-        <button class="mobile-menu-toggle" aria-label="Open navigation" onclick="openMobileMenu()">&#9776;</button>
+        <button class="mobile-menu-toggle" aria-label="Open navigation">&#9776;</button>
     </div>
 
     <!-- Mobile Navigation Overlay -->
     <div class="mobile-nav-overlay" id="mobileNavOverlay">
         <div class="mobile-nav-content">
-            <button class="mobile-nav-close" aria-label="Close navigation" onclick="closeMobileMenu()">
+            <button class="mobile-nav-close" aria-label="Close navigation">
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="10" y1="10" x2="26" y2="26" stroke="white" stroke-width="2" stroke-linecap="round" />
                     <line x1="26" y1="10" x2="10" y2="26" stroke="white" stroke-width="2" stroke-linecap="round" />
                 </svg>
             </button>
             <ul class="mobile-nav-links">
-                <li><a href="#top" onclick="closeMobileMenu()">Home</a></li>
-                <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
-                <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
-                <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
-                <li><a href="#" onclick="closeMobileMenu()">FI / EN</a></li>
+                <li><a href="#top" class="mobile-nav-link">Home</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                <li><a href="#" class="mobile-nav-link">FI / EN</a></li>
             </ul>
         </div>
     </div>
 
-    <script>
+
+
+    <!-- Move script to end of body for reliability -->
+
+    <!-- ...existing code... -->
+
+</body>
+<script>
+    // Robust mobile nav menu toggle with debug logging
+    document.addEventListener('DOMContentLoaded', function () {
+        var menuToggle = document.querySelector('.mobile-menu-toggle');
+        var navOverlay = document.getElementById('mobileNavOverlay');
+        var closeBtn = document.querySelector('.mobile-nav-close');
+        var navLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (!menuToggle) console.error('Mobile menu toggle button not found');
+        if (!navOverlay) console.error('Mobile nav overlay not found');
+        if (!closeBtn) console.error('Mobile nav close button not found');
+        if (!navLinks.length) console.error('Mobile nav links not found');
+
         function openMobileMenu() {
-            document.getElementById('mobileNavOverlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
+            if (navOverlay) {
+                navOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
         }
         function closeMobileMenu() {
-            document.getElementById('mobileNavOverlay').classList.remove('active');
-            document.body.style.overflow = '';
+            if (navOverlay) {
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         }
-    </script>
 
-    <!-- Single navbar at the top -->
-    <nav class="navbar">
-        <span class="navbar-brand"><img src="logo.png" alt="Logo Icon" class="logo-img"> <span
-                class="brand-poppins">Verus Nordica</span></span>
-        <button class="navbar-toggle" aria-label="Toggle navigation"
-            onclick="document.querySelector('.navbar-links').classList.toggle('active')">&#9776;</button>
-        <ul class="navbar-links">
-            <li><a href="#top" class="active-link">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="#">FI/EN</a></li>
-        </ul>
-        <a href="contact.html" class="navbar-contact">Contact</a>
-    </nav>
+        if (menuToggle) {
+            menuToggle.addEventListener('click', openMobileMenu);
+        }
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeMobileMenu);
+        }
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    });
+</script>
 
-    <div class="hero-image-wrapper" id="top">
-        <img src="picture.png" alt="Top Image" class="hero-image">
-        <div class="hero-text-overlay">
-            <span class="hero-text">
-                Average and<br>Survey Agency<br>in Finland
-            </span>
-        </div>
-        <!-- Only one navbar at the top of the page -->
+<!-- Single navbar at the top -->
+<nav class="navbar">
+    <span class="navbar-brand"><img src="logo.png" alt="Logo Icon" class="logo-img"> <span class="brand-poppins">Verus
+            Nordica</span></span>
+    <button class="navbar-toggle" aria-label="Toggle navigation"
+        onclick="document.querySelector('.navbar-links').classList.toggle('active')">&#9776;</button>
+    <ul class="navbar-links">
+        <li><a href="#top" class="active-link">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#">FI/EN</a></li>
+    </ul>
+    <a href="contact.html" class="navbar-contact">Contact</a>
+</nav>
+
+<div class="hero-image-wrapper" id="top">
+    <img src="picture.png" alt="Top Image" class="hero-image">
+    <div class="hero-text-overlay">
+        <span class="hero-text">
+            Average and<br>Survey Agency<br>in Finland
+        </span>
     </div>
+    <!-- Only one navbar at the top of the page -->
+</div>
 
-    <!-- About Section -->
-    <div class="main-body-text" id="about">
-        <h1 style="text-align:center;">We survey to<br>secure your credibility</h1>
-        <p class="about-centered-text">
-            Verus Nordica is an independent average and<br>
-            survey agency providing specialized marine and<br>
-            cargo surveying services to the international<br>
-            insurance industry, as well as to companies<br>
-            engaging in maritime transport and global trade.
-        </p>
+<!-- About Section -->
+<div class="main-body-text" id="about">
+    <h1 style="text-align:center;">We survey to<br>secure your credibility</h1>
+    <p class="about-centered-text">
+        Verus Nordica is an independent average and<br>
+        survey agency providing specialized marine and<br>
+        cargo surveying services to the international<br>
+        insurance industry, as well as to companies<br>
+        engaging in maritime transport and global trade.
+    </p>
 
-        <p>We act as independent surveyors for the benefit <br>
-            of our principals, delivering impartial and<br>
-            professional assessments</p>
-        <a href="about.html" class="see-more-btn"
+    <p>We act as independent surveyors for the benefit <br>
+        of our principals, delivering impartial and<br>
+        professional assessments</p>
+    <a href="about.html" class="see-more-btn" style="display: inline-flex; align-items: center; text-decoration: none;">
+        See More
+        <span class="see-more-arrow-wrapper">
+            <svg class="see-more-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="#002699" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="8 5 16 12 8 19" />
+            </svg>
+        </span>
+    </a>
+</div>
+
+<!-- Services Section -->
+<section class="services-section" id="services">
+    <h2>Services</h2>
+    <p class="services-subtitle">Experienced professionals offer a wide range of average and survey agency
+        services.</p>
+    <div class="services-list">
+        <div class="service-card">
+            <img src="image1.png" alt="Survey" class="service-img">
+            <div class="service-info">
+                <div class="service-title">Inspection and Supervision</div>
+                <div class="service-desc">Professional and independent inspection and supervision services for cargo
+                    and vessel operations. In addition, verify cargo condition and quantity prior to loading and
+                    offer real-time supervision during loading and unloading operations.
+                </div>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-info">
+                <div class="service-title">Survey</div>
+                <div class="service-desc">Perform comprehensive marine surveys, including: Marine Cargo Surveys, P&I
+                    (Protection & Indemnity) Surveys, H&M (Hull & Machinery) Surveys, Loss Prevention Surveys,
+                    Condition Appraisals, Casualty Surveys.
+                </div>
+            </div>
+            <img src="image2.png" alt="Inspection" class="service-img">
+        </div>
+        <div class="service-card">
+            <img src="image3.png" alt="Claims Management" class="service-img">
+            <div class="service-info">
+                <div class="service-title">Claims Management</div>
+                <div class="service-desc">Provide full claims management services, including: Claims Settlement,
+                    Claims Consulting, Recovery and Subrogation, Salvage Sales.</div>
+            </div>
+        </div>
+    </div>
+    <div class="services-more-btn-wrapper">
+        <a href="services.html" class="services-more-btn"
             style="display: inline-flex; align-items: center; text-decoration: none;">
             See More
             <span class="see-more-arrow-wrapper">
@@ -104,85 +185,36 @@
             </span>
         </a>
     </div>
+</section>
 
-    <!-- Services Section -->
-    <section class="services-section" id="services">
-        <h2>Services</h2>
-        <p class="services-subtitle">Experienced professionals offer a wide range of average and survey agency
-            services.</p>
-        <div class="services-list">
-            <div class="service-card">
-                <img src="image1.png" alt="Survey" class="service-img">
-                <div class="service-info">
-                    <div class="service-title">Inspection and Supervision</div>
-                    <div class="service-desc">Professional and independent inspection and supervision services for cargo
-                        and vessel operations. In addition, verify cargo condition and quantity prior to loading and
-                        offer real-time supervision during loading and unloading operations.
-                    </div>
+<footer class="footer" style="margin-top: auto;">
+    <div class="footer-content">
+        <div class="footer-left">
+            <div class="footer-brand">
+                <img src="icon_white.png" alt="Logo Icon" class="footer-logo-img">
+                <span class="brand-poppins footer-brand-white">Verus Nordica</span>
+            </div>
+            <div class="footer-info-wrapper">
+                <div class="footer-info">
+                    Isokaari 42A as.5<br>
+                    FIN-00200 Helsinki<br>
+                    Tel. +358 400 413264<br>
+                    Fax. +358 19 383541<br>
+                    Business ID 1646125-8
                 </div>
             </div>
-            <div class="service-card">
-                <div class="service-info">
-                    <div class="service-title">Survey</div>
-                    <div class="service-desc">Perform comprehensive marine surveys, including: Marine Cargo Surveys, P&I
-                        (Protection & Indemnity) Surveys, H&M (Hull & Machinery) Surveys, Loss Prevention Surveys,
-                        Condition Appraisals, Casualty Surveys.
-                    </div>
-                </div>
-                <img src="image2.png" alt="Inspection" class="service-img">
-            </div>
-            <div class="service-card">
-                <img src="image3.png" alt="Claims Management" class="service-img">
-                <div class="service-info">
-                    <div class="service-title">Claims Management</div>
-                    <div class="service-desc">Provide full claims management services, including: Claims Settlement,
-                        Claims Consulting, Recovery and Subrogation, Salvage Sales.</div>
-                </div>
-            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
-        <div class="services-more-btn-wrapper">
-            <a href="services.html" class="services-more-btn"
-                style="display: inline-flex; align-items: center; text-decoration: none;">
-                See More
-                <span class="see-more-arrow-wrapper">
-                    <svg class="see-more-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                        viewBox="0 0 24 24" fill="none" stroke="#002699" stroke-width="1.7" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <polyline points="8 5 16 12 8 19" />
-                    </svg>
-                </span>
-            </a>
-        </div>
-    </section>
-
-    <footer class="footer" style="margin-top: auto;">
-        <div class="footer-content">
-            <div class="footer-left">
-                <div class="footer-brand">
-                    <img src="icon_white.png" alt="Logo Icon" class="footer-logo-img">
-                    <span class="brand-poppins footer-brand-white">Verus Nordica</span>
-                </div>
-                <div class="footer-info-wrapper">
-                    <div class="footer-info">
-                        Isokaari 42A as.5<br>
-                        FIN-00200 Helsinki<br>
-                        Tel. +358 400 413264<br>
-                        Fax. +358 19 383541<br>
-                        Business ID 1646125-8
-                    </div>
-                </div>
-                <ul class="footer-links">
-                    <li><a href="#top">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            Copyright © 2026 Verus Nordica. All rights reserved.
-        </div>
-    </footer>
+    </div>
+    <div class="footer-bottom">
+        Copyright © 2026 Verus Nordica. All rights reserved.
+    </div>
+</footer>
 </body>
 
 </html>
