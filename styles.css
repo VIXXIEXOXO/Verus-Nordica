@@ -35,7 +35,8 @@
 
     .send-message-btn {
         min-width: 180px !important;
-        width: 100%;
+        width: 180px !important;
+        max-width: 180px !important;
         font-size: 1rem !important;
         padding: 0.7rem 1.2rem !important;
     }
@@ -69,7 +70,7 @@
         position: relative !important;
         width: 170px !important;
         min-width: 170px !important;
-        max-width: 100% !important;
+        max-width: 170px !important;
         margin-left: auto !important;
         margin-right: auto !important;
         border: 1.5px solid #002699 !important;
@@ -107,6 +108,7 @@
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
     position: relative;
+    width: 260px;
 }
 
 .send-message-btn:hover {
@@ -273,7 +275,7 @@ html {
     scroll-behavior: smooth;
     height: 100%;
 }
-}
+
 
 /* Body main color */
 body.body-main {
@@ -283,7 +285,7 @@ body.body-main {
     display: flex;
     flex-direction: column;
 }
-}
+
 
 /* Center main about text as in reference image */
 .about-centered-text {
