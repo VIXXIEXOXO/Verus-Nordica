@@ -2,4 +2,4 @@
 .gitattributes
 
 # os file
-.Ds_Store
+.DS_Store
