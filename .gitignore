@@ -1,0 +1,5 @@
+# project configuration
+.gitattributes
+
+# os file
+.Ds_Store
