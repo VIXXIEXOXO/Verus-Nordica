@@ -11,8 +11,8 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body class="body-main">
+    <!-- MOBILE TOP BAR -->
     <div class="mobile-top-bar">
       <span class="mobile-brand">
         <img src="assets/logo.svg" alt="Logo Icon" class="logo-img" />
@@ -26,6 +26,7 @@
         &#9776;
       </button>
     </div>
+    <!-- MOBILE NAVIGATION OVERLAY -->
     <div class="mobile-nav-overlay" id="mobileNavOverlay">
       <div class="mobile-nav-content">
         <button
@@ -61,7 +62,9 @@
           </svg>
         </button>
         <ul class="mobile-nav-links">
-          <li><a href="index.html#top" onclick="closeMobileMenu()">Home</a></li>
+          <li>
+            <a href="index.html" onclick="closeMobileMenu()">Home</a>
+          </li>
           <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
           <li>
             <a href="services.html" onclick="closeMobileMenu()">Services</a>
@@ -73,39 +76,25 @@
         </ul>
       </div>
     </div>
-    <script>
-      function openMobileMenu() {
-        document.getElementById("mobileNavOverlay").classList.add("active");
-        document.body.style.overflow = "hidden";
-      }
-      function closeMobileMenu() {
-        document.getElementById("mobileNavOverlay").classList.remove("active");
-        document.body.style.overflow = "";
-      }
-    </script>
+    <!-- DESKTOP NAVIGATION -->
     <nav class="navbar">
       <span class="navbar-brand"
         ><img src="assets/logo.svg" alt="Logo Icon" class="logo-img" />
         <span class="brand-poppins">Verus Nordica</span></span
       >
-      <button
-        class="navbar-toggle"
-        aria-label="Toggle navigation"
-        onclick="
-          document.querySelector('.navbar-links').classList.toggle('active')
-        "
-      >
-        &#9776;
-      </button>
       <ul class="navbar-links">
-        <li><a href="index.html#top">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html" class="active-link">Services</a></li>
         <li><a href="#">FI/EN</a></li>
       </ul>
       <a href="contact.html" class="navbar-contact">Contact</a>
     </nav>
+
+    <!-- SERVICES BODY CONTENT GOES HERE -->
     <main class="services-main"></main>
+
+    <!-- FOOTER -->
     <footer class="footer" id="contact">
       <div class="footer-content">
         <div class="footer-left">
@@ -127,7 +116,7 @@
             </div>
           </div>
           <ul class="footer-links">
-            <li><a href="index.html#top">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -138,5 +127,8 @@
         Copyright © 2026 Verus Nordica. All rights reserved.
       </div>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script src="script.js"></script>
   </body>
 </html>
