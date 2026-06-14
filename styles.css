@@ -433,7 +433,186 @@ hr {
     width: 100%;
   }
 }
-/* ...existing code... */
+/* the about page css */
+.topaboutpage {
+  background-image: url("assets/Backdrop2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+}
+.topaboutpage .tsp-1 {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 130px 0 100px 0;
+}
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin-top: -150px;
+  position: relative;
+  z-index: 2;
+}
+.carousel-track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+.carousel-track img {
+  width: 35vw;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 5px));
+  }
+}
+.tpa-1 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 70px 0 100px 0;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.info {
+  background: #ecf8ff;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 30px;
+}
+.info h2 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-align: center;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 15px 100px;
+  padding-left: 80px;
+  max-width: 600px;
+}
+.label {
+  text-align: left;
+  font-weight: 300;
+}
+.value {
+  text-align: right;
+  font-weight: 300;
+}
+.tpa-2 {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 0 50px 0;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.section-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.info-1 {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 100px;
+}
+/* mobile css for about page */
+@media (max-width: 768px) {
+  .topaboutpage {
+    min-height: 450px;
+  }
+
+  .topaboutpage .tsp-1 {
+    padding: 100px 20px 60px;
+    text-align: left;
+  }
+
+  .tsp-2 {
+    font-size: 2rem;
+  }
+
+  .tsp-3 {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .carousel {
+    margin-top: -80px;
+  }
+
+  .carousel-track {
+    gap: 20px;
+  }
+
+  .carousel-track img {
+    width: 80vw;
+    height: 250px;
+  }
+
+  .tpa-1 {
+    font-size: 1.1rem;
+    padding: 50px 20px;
+    text-align: left;
+    min-width: 380px;
+  }
+
+  .info {
+    margin: 0 20px;
+    padding: 25px 20px;
+  }
+
+  .info h2 {
+    font-size: 1.4rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-left: 0;
+  }
+
+  .label,
+  .value {
+    text-align: left;
+  }
+
+  .label {
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  .tpa-2 {
+    padding: 60px 20px 30px;
+    font-size: 1.8rem;
+  }
+
+  .section-img {
+    max-width: calc(100% - 40px);
+  }
+
+  .info-1 {
+    padding: 20px;
+    padding-bottom: 60px;
+  }
+}
 
 /* ================= CONTACT PAGE RESPONSIVE STYLES ================= */
 @media (max-width: 770px) {
