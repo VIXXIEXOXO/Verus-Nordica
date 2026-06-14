@@ -388,6 +388,9 @@ hr {
 }
 /* mobile css for service page */
 @media (max-width: 768px) {
+  .topservicepage {
+    min-height: 400px;
+  }
   .topservicepage .tsp-1 {
     padding: 100px 20px;
   }
