@@ -21,7 +21,39 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: left;
+}
+
+.contact-form input.invalid-field,
+.contact-form textarea.invalid-field {
+  border-color: #d93025 !important;
+  box-shadow: inset 0 0 0 1px #d93025;
+  background: #fff3f3 !important;
+}
+
+.contact-form .field-wrapper {
+  position: relative;
+}
+
+.contact-form .field-checkmark {
+  position: absolute;
+  right: 1rem;
+  top: 2.4rem;
+  font-size: 1rem;
+  color: #0f9d58;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.contact-form input.valid-field,
+.contact-form textarea.valid-field {
+  box-shadow: inset 0 0 0 1px #0f9d58;
+}
+
+.contact-form input.valid-field+.field-checkmark,
+.contact-form textarea.valid-field+.field-checkmark {
+  opacity: 1;
 }
 
 html,
@@ -319,6 +351,7 @@ body {
   color: #444;
   line-height: 1.5;
 }
+
 /* the service page css */
 .topservicepage {
   background-image: url("assets/Backdrop1.png");
@@ -327,15 +360,18 @@ body {
   background-repeat: no-repeat;
   min-height: 500px;
 }
+
 .topservicepage .tsp-1 {
   max-width: 900px;
   margin: 0 auto;
   padding: 130px 0 100px 0;
 }
+
 .tsp-2 {
   font-size: 2.4rem;
   font-weight: 400;
 }
+
 .tsp-3 {
   font-size: 1.4rem;
   font-weight: 300;
@@ -343,6 +379,7 @@ body {
   padding: 0 70px 0 100px;
   line-height: 1.5;
 }
+
 .services-container {
   display: flex;
   flex-wrap: wrap;
@@ -350,15 +387,18 @@ body {
   max-width: 1000px;
   margin: 50px 180px 50px auto;
 }
+
 .service-item {
   display: grid;
   grid-template-columns: 500px 400px;
   gap: 80px;
   align-items: start;
 }
+
 .service-text {
   flex: 1;
 }
+
 .service-item img {
   width: 100%;
   max-width: 400px;
@@ -366,6 +406,7 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
+
 .service-text h2 {
   font-size: 2rem;
   font-weight: 400;
@@ -379,6 +420,7 @@ body {
 .service-text ul {
   font-weight: 300;
 }
+
 hr {
   border: none;
   height: 3px;
@@ -386,11 +428,13 @@ hr {
   background-color: #eaf1f6;
   margin: 20px 0;
 }
+
 /* mobile css for service page */
 @media (max-width: 768px) {
   .topservicepage {
     min-height: 400px;
   }
+
   .topservicepage .tsp-1 {
     padding: 100px 20px;
   }
@@ -405,6 +449,7 @@ hr {
     width: 100%;
     text-align: left;
   }
+
   .services-container {
     margin: 30px 20px;
     max-width: 100%;
@@ -432,10 +477,12 @@ hr {
     width: 100%;
     text-align: left;
   }
+
   hr {
     width: 100%;
   }
 }
+
 /* the about page css */
 .topaboutpage {
   background-image: url("assets/Backdrop2.png");
@@ -444,11 +491,13 @@ hr {
   background-repeat: no-repeat;
   min-height: 600px;
 }
+
 .topaboutpage .tsp-1 {
   max-width: 900px;
   margin: 0 auto;
   padding: 130px 0 100px 0;
 }
+
 .carousel {
   width: 100%;
   overflow: hidden;
@@ -457,12 +506,14 @@ hr {
   position: relative;
   z-index: 2;
 }
+
 .carousel-track {
   display: flex;
   gap: 50px;
   width: max-content;
   animation: scroll 30s linear infinite;
 }
+
 .carousel-track img {
   width: 35vw;
   height: 50vh;
@@ -470,6 +521,7 @@ hr {
   border-radius: 10px;
   flex-shrink: 0;
 }
+
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -479,6 +531,7 @@ hr {
     transform: translateX(calc(-50% - 5px));
   }
 }
+
 .tpa-1 {
   font-size: 1.4rem;
   font-weight: 300;
@@ -487,6 +540,7 @@ hr {
   max-width: 600px;
   margin: 0 auto;
 }
+
 .info {
   background: #ecf8ff;
   max-width: 700px;
@@ -494,11 +548,13 @@ hr {
   border-radius: 5px;
   padding: 30px;
 }
+
 .info h2 {
   font-size: 1.7rem;
   font-weight: 400;
   text-align: center;
 }
+
 .info-grid {
   display: grid;
   grid-template-columns: 150px 1fr;
@@ -506,14 +562,17 @@ hr {
   padding-left: 80px;
   max-width: 600px;
 }
+
 .label {
   text-align: left;
   font-weight: 300;
 }
+
 .value {
   text-align: right;
   font-weight: 300;
 }
+
 .tpa-2 {
   max-width: 900px;
   margin: 0 auto;
@@ -521,6 +580,7 @@ hr {
   font-size: 2.4rem;
   font-weight: 400;
 }
+
 .section-img {
   width: 100%;
   max-width: 500px;
@@ -531,12 +591,14 @@ hr {
   margin: 0 auto;
   padding: 20px 0;
 }
+
 .info-1 {
   max-width: 700px;
   margin: 0 auto;
   padding: 20px;
   padding-bottom: 100px;
 }
+
 /* mobile css for about page */
 @media (max-width: 768px) {
   .topaboutpage {
@@ -630,7 +692,7 @@ hr {
     gap: 0.8rem !important;
   }
 
-  .contact-form > div[style*="display: flex;"][style*="gap: 1rem;"] {
+  .contact-form>div[style*="display: flex;"][style*="gap: 1rem;"] {
     flex-direction: column !important;
     gap: 0.5rem !important;
   }
@@ -661,7 +723,6 @@ hr {
 
 .contact-section p {
   font-size: 1.1rem !important;
-  text-align: left !important;
   width: 95vw !important;
   margin: 0 auto 1.2rem auto !important;
 }
@@ -1641,6 +1702,7 @@ body.body-main {
 }
 
 @media (max-width: 700px) {
+
   .services-section h2,
   .services-subtitle {
     padding-left: 1.2rem;

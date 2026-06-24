@@ -1,159 +1,128 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - Verus Nordica</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Momo+Trust+Display:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="body-main">
-    <!-- MOBILE TOP BAR -->
-    <div class="mobile-top-bar">
-      <span class="mobile-brand">
-        <img src="assets/logo.svg" alt="Logo Icon" class="logo-img" />
-        <span class="brand-poppins">Verus Nordica</span>
-      </span>
-      <button
-        class="mobile-menu-toggle"
-        aria-label="Open navigation"
-        onclick="openMobileMenu()"
-      >
-        &#9776;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Verus Nordica</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Momo+Trust+Display:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="body-main">
+  <!-- MOBILE TOP BAR -->
+  <div class="mobile-top-bar">
+    <span class="mobile-brand">
+      <img src="assets/logo.svg" alt="Logo Icon" class="logo-img" />
+      <span class="brand-poppins">Verus Nordica</span>
+    </span>
+    <button class="mobile-menu-toggle" aria-label="Open navigation" onclick="openMobileMenu()">
+      &#9776;
+    </button>
+  </div>
+  <!-- MOBILE NAVIGATION OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-content">
+      <button class="mobile-nav-close" aria-label="Close navigation" onclick="closeMobileMenu()">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="10" x2="26" y2="26" stroke="white" stroke-width="2" stroke-linecap="round" />
+          <line x1="26" y1="10" x2="10" y2="26" stroke="white" stroke-width="2" stroke-linecap="round" />
+        </svg>
       </button>
-    </div>
-    <!-- MOBILE NAVIGATION OVERLAY -->
-    <div class="mobile-nav-overlay" id="mobileNavOverlay">
-      <div class="mobile-nav-content">
-        <button
-          class="mobile-nav-close"
-          aria-label="Close navigation"
-          onclick="closeMobileMenu()"
-        >
-          <svg
-            width="36"
-            height="36"
-            viewBox="0 0 36 36"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="10"
-              y1="10"
-              x2="26"
-              y2="26"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-            <line
-              x1="26"
-              y1="10"
-              x2="10"
-              y2="26"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-        </button>
-        <ul class="mobile-nav-links">
-          <li>
-            <a href="index.html" onclick="closeMobileMenu()">Home</a>
-          </li>
-          <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
-          <li>
-            <a href="services.html" onclick="closeMobileMenu()">Services</a>
-          </li>
-          <li>
-            <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
-          </li>
-          <li><a href="#" onclick="closeMobileMenu()">FI / EN</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- DESKTOP NAVIGATION -->
-    <nav class="navbar">
-      <span class="navbar-brand">
-        <img src="assets/logo.svg" alt="Logo Icon" class="logo-img" />
-        <span class="brand-poppins">Verus Nordica</span>
-      </span>
-      <ul class="navbar-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active-link">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="#">FI/EN</a></li>
+      <ul class="mobile-nav-links">
+        <li>
+          <a href="index.html" onclick="closeMobileMenu()">Home</a>
+        </li>
+        <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+        <li>
+          <a href="services.html" onclick="closeMobileMenu()">Services</a>
+        </li>
+        <li>
+          <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+        </li>
+        <li><a href="#" onclick="closeMobileMenu()">FI / EN</a></li>
       </ul>
-      <a href="contact.html" class="navbar-contact">Contact</a>
-    </nav>
+    </div>
+  </div>
+  <!-- DESKTOP NAVIGATION -->
+  <nav class="navbar">
+    <span class="navbar-brand">
+      <img src="assets/logo.svg" alt="Logo Icon" class="logo-img" />
+      <span class="brand-poppins">Verus Nordica</span>
+    </span>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active-link">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="#">FI/EN</a></li>
+    </ul>
+    <a href="contact.html" class="navbar-contact">Contact</a>
+  </nav>
 
-    <!-- ABOUT BODY CONTENT GOES HERE -->
-    <section class="topaboutpage">
-      <div class="tsp-1">
-        <h1 class="tsp-2">About</h1>
-        <p class="tsp-3">
-          Verus Nordica is an independent average and survey agency providing
-          specialized marine and cargo surveying services to the international
-          insurance industry, as well as to companies engaged in maritime
-          transport and global trade.
-        </p>
-      </div>
-    </section>
-    <section>
-      <div class="carousel">
-        <div class="carousel-track">
-          <img src="assets/Placeholder.jpg" alt="" />
-          <img src="assets/Placeholder.jpg" alt="" />
-          <img src="assets/Placeholder.jpg" alt="" />
-          <img src="assets/Placeholder.jpg" alt="" />
-          <img src="assets/Placeholder.jpg" alt="" />
-          <img src="assets/Placeholder.jpg" alt="" />
-        </div>
-      </div>
-      <p class="tpa-1">
-        We act as independent surveyors for the benefit of our principals,
-        delivering impartial and professional assessments.
+  <!-- ABOUT BODY CONTENT GOES HERE -->
+  <section class="topaboutpage">
+    <div class="tsp-1">
+      <h1 class="tsp-2">About</h1>
+      <p class="tsp-3">
+        Verus Nordica is an independent average and survey agency providing
+        specialized marine and cargo surveying services to the international
+        insurance industry, as well as to companies engaged in maritime
+        transport and global trade.
       </p>
-      <div class="info">
-        <h2>Company Information</h2>
-        <div class="info-grid">
-          <div class="label">Founded</div>
-          <div class="value">2001</div>
-          <div class="label">Address</div>
-          <div class="value">Isokaari 42A as.5. 00200 Helsinki</div>
-          <div class="label">Managing Director</div>
-          <div class="value">Visa Riihimäki</div>
+    </div>
+  </section>
+  <section>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="assets/Placeholder.jpg" alt="" />
+        <img src="assets/Placeholder.jpg" alt="" />
+        <img src="assets/Placeholder.jpg" alt="" />
+        <img src="assets/Placeholder.jpg" alt="" />
+        <img src="assets/Placeholder.jpg" alt="" />
+        <img src="assets/Placeholder.jpg" alt="" />
+      </div>
+    </div>
+    <p class="tpa-1">
+      We act as independent surveyors for the benefit of our principals,
+      delivering impartial and professional assessments.
+    </p>
+    <div class="info">
+      <h2>Company Information</h2>
+      <div class="info-grid">
+        <div class="label">Founded</div>
+        <div class="value">2001</div>
+        <div class="label">Address</div>
+        <div class="value">Isokaari 42A as.5. 00200 Helsinki</div>
+        <div class="label">Managing Director</div>
+        <div class="value">Visa Riihimäki</div>
+      </div>
+    </div>
+    <h2 class="tpa-2">Our Member</h2>
+    <img src="assets/Placeholder.jpg" alt="Member 1" class="section-img" />
+    <div class="info-1">
+      <div class="info-grid">
+        <div class="label">Toni Riihimäki</div>
+        <div class="value" style="color: #002699; font-weight: 400">
+          +358 40 041 3264
+        </div>
+        <div class="label">Surveyor</div>
+        <div class="value">
+          <a href="mailto:visa.riihimaki@verusnordica.fi"
+            style="color: #002699; text-decoration: none; font-weight: 400">visa.riihimaki@verusnordica.fi</a>
         </div>
       </div>
-      <h2 class="tpa-2">Our Member</h2>
-      <img src="assets/Placeholder.jpg" alt="Member 1" class="section-img" />
-      <div class="info-1">
-        <div class="info-grid">
-          <div class="label">Toni Riihimäki</div>
-          <div class="value" style="color: #002699; font-weight: 400">
-            +358 40 041 3264
-          </div>
-          <div class="label">Surveyor</div>
-          <div class="value">
-            <a
-              href="mailto:visa.riihimaki@verusnordica.fi"
-              style="color: #002699; text-decoration: none; font-weight: 400"
-              >visa.riihimaki@verusnordica.fi</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <div id="footer-container"></div>
-    <script src="js/footer.js"></script>
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
+  <script src="js/footer.js"></script>
 
-    <!-- Mobile Menu Script -->
-    <script src="js/script.js"></script>
-  </body>
+  <!-- Mobile Menu Script -->
+  <script src="js/script.js"></script>
+</body>
+
 </html>

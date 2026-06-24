@@ -1,225 +1,173 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verus Nordica</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Momo+Trust+Display:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="body-main">
-    <!-- MOBILE TOP BAR -->
-    <div class="mobile-top-bar">
-      <span class="mobile-brand">
-        <img src="assets/logo.svg" alt="Logo Icon" class="logo-img" />
-        <span class="brand-poppins">Verus Nordica</span>
-      </span>
-      <button class="mobile-menu-toggle" aria-label="Open navigation">
-        &#9776;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verus Nordica</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Momo+Trust+Display:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="body-main">
+  <!-- MOBILE TOP BAR -->
+  <div class="mobile-top-bar">
+    <span class="mobile-brand">
+      <img src="assets/logo.svg" alt="Logo Icon" class="logo-img" />
+      <span class="brand-poppins">Verus Nordica</span>
+    </span>
+    <button class="mobile-menu-toggle" aria-label="Open navigation">
+      &#9776;
+    </button>
+  </div>
+  <!-- MOBILE NAVIGATION OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-content">
+      <button class="mobile-nav-close" aria-label="Close navigation">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="10" x2="26" y2="26" stroke="white" stroke-width="2" stroke-linecap="round" />
+          <line x1="26" y1="10" x2="10" y2="26" stroke="white" stroke-width="2" stroke-linecap="round" />
+        </svg>
       </button>
-    </div>
-    <!-- MOBILE NAVIGATION OVERLAY -->
-    <div class="mobile-nav-overlay" id="mobileNavOverlay">
-      <div class="mobile-nav-content">
-        <button class="mobile-nav-close" aria-label="Close navigation">
-          <svg
-            width="36"
-            height="36"
-            viewBox="0 0 36 36"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="10"
-              y1="10"
-              x2="26"
-              y2="26"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-            <line
-              x1="26"
-              y1="10"
-              x2="10"
-              y2="26"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-        </button>
-        <ul class="mobile-nav-links">
-          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-          <li><a href="about.html" class="mobile-nav-link">About</a></li>
-          <li><a href="services.html" class="mobile-nav-link">Services</a></li>
-          <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-          <li><a href="#" class="mobile-nav-link">FI / EN</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- DESKTOP NAVIGATION -->
-    <nav class="navbar">
-      <span class="navbar-brand">
-        <img src="assets/logo.svg" alt="Logo Icon" class="logo-img" />
-        <span class="brand-poppins">Verus Nordica</span>
-      </span>
-      <ul class="navbar-links">
-        <li><a href="index.html" class="active-link">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="#">FI/EN</a></li>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        <li><a href="#" class="mobile-nav-link">FI / EN</a></li>
       </ul>
-      <a href="contact.html" class="navbar-contact">Contact</a>
-    </nav>
+    </div>
+  </div>
+  <!-- DESKTOP NAVIGATION -->
+  <nav class="navbar">
+    <span class="navbar-brand">
+      <img src="assets/logo.svg" alt="Logo Icon" class="logo-img" />
+      <span class="brand-poppins">Verus Nordica</span>
+    </span>
+    <ul class="navbar-links">
+      <li><a href="index.html" class="active-link">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="#">FI/EN</a></li>
+    </ul>
+    <a href="contact.html" class="navbar-contact">Contact</a>
+  </nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero-image-wrapper" id="top">
-      <img src="assets/picture.png" alt="Top Image" class="hero-image" />
-      <div class="hero-text-overlay">
-        <span class="hero-text">
-          Average and<br />
-          Survey Agency<br />
-          in Finland
-        </span>
+  <!-- HERO SECTION -->
+  <section class="hero-image-wrapper" id="top">
+    <img src="assets/picture.png" alt="Top Image" class="hero-image" />
+    <div class="hero-text-overlay">
+      <span class="hero-text">
+        Average and<br />
+        Survey Agency<br />
+        in Finland
+      </span>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="main-body-text" id="about">
+    <h1 style="text-align: center">
+      We survey to<br />
+      secure your credibility
+    </h1>
+    <p class="about-centered-text">
+      Verus Nordica is an independent average and<br />
+      survey agency providing specialized marine and<br />
+      cargo surveying services to the international<br />
+      insurance industry, as well as to companies<br />
+      engaging in maritime transport and global trade.
+    </p>
+    <p>
+      We act as independent surveyors for the benefit <br />
+      of our principals, delivering impartial and<br />
+      professional assessments
+    </p>
+    <a href="about.html" class="see-more-btn" style="display: inline-flex; align-items: center; text-decoration: none">
+      See More
+      <span class="see-more-arrow-wrapper">
+        <svg class="see-more-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+          fill="none" stroke="#002699" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="8 5 16 12 8 19" />
+        </svg>
+      </span>
+    </a>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services-section" id="services">
+    <h2>Services</h2>
+    <p class="services-subtitle">
+      Experienced professionals offer a wide range of average and survey
+      agency services.
+    </p>
+    <div class="services-list">
+      <!-- Service Card 1 -->
+      <div class="service-card">
+        <img src="assets/image1.png" alt="Survey" class="service-img" />
+        <div class="service-info">
+          <div class="service-title">Inspection and Supervision</div>
+          <div class="service-desc">
+            Professional and independent inspection and supervision services
+            for cargo and vessel operations. In addition, verify cargo
+            condition and quantity prior to loading and offer real-time
+            supervision during loading and unloading operations.
+          </div>
+        </div>
       </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="main-body-text" id="about">
-      <h1 style="text-align: center">
-        We survey to<br />
-        secure your credibility
-      </h1>
-      <p class="about-centered-text">
-        Verus Nordica is an independent average and<br />
-        survey agency providing specialized marine and<br />
-        cargo surveying services to the international<br />
-        insurance industry, as well as to companies<br />
-        engaging in maritime transport and global trade.
-      </p>
-      <p>
-        We act as independent surveyors for the benefit <br />
-        of our principals, delivering impartial and<br />
-        professional assessments
-      </p>
-      <a
-        href="about.html"
-        class="see-more-btn"
-        style="display: inline-flex; align-items: center; text-decoration: none"
-      >
+      <!-- Service Card 2 -->
+      <div class="service-card">
+        <div class="service-info">
+          <div class="service-title">Survey</div>
+          <div class="service-desc">
+            Perform comprehensive marine surveys, including: Marine Cargo
+            Surveys, P&I (Protection & Indemnity) Surveys, H&M (Hull &
+            Machinery) Surveys, Loss Prevention Surveys, Condition Appraisals,
+            Casualty Surveys.
+          </div>
+        </div>
+        <img src="assets/image2.png" alt="Inspection" class="service-img" />
+      </div>
+      <!-- Service Card 3 -->
+      <div class="service-card">
+        <img src="assets/image3.png" alt="Claims Management" class="service-img" />
+        <div class="service-info">
+          <div class="service-title">Claims Management</div>
+          <div class="service-desc">
+            Provide full claims management services, including: Claims
+            Settlement, Claims Consulting, Recovery and Subrogation, Salvage
+            Sales.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- See More Button -->
+    <div class="services-more-btn-wrapper">
+      <a href="services.html" class="services-more-btn" style="
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+          ">
         See More
         <span class="see-more-arrow-wrapper">
-          <svg
-            class="see-more-arrow"
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#002699"
-            stroke-width="1.7"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+          <svg class="see-more-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+            fill="none" stroke="#002699" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="8 5 16 12 8 19" />
           </svg>
         </span>
       </a>
-    </section>
+    </div>
+  </section>
 
-    <!-- SERVICES SECTION -->
-    <section class="services-section" id="services">
-      <h2>Services</h2>
-      <p class="services-subtitle">
-        Experienced professionals offer a wide range of average and survey
-        agency services.
-      </p>
-      <div class="services-list">
-        <!-- Service Card 1 -->
-        <div class="service-card">
-          <img src="assets/image1.png" alt="Survey" class="service-img" />
-          <div class="service-info">
-            <div class="service-title">Inspection and Supervision</div>
-            <div class="service-desc">
-              Professional and independent inspection and supervision services
-              for cargo and vessel operations. In addition, verify cargo
-              condition and quantity prior to loading and offer real-time
-              supervision during loading and unloading operations.
-            </div>
-          </div>
-        </div>
-        <!-- Service Card 2 -->
-        <div class="service-card">
-          <div class="service-info">
-            <div class="service-title">Survey</div>
-            <div class="service-desc">
-              Perform comprehensive marine surveys, including: Marine Cargo
-              Surveys, P&I (Protection & Indemnity) Surveys, H&M (Hull &
-              Machinery) Surveys, Loss Prevention Surveys, Condition Appraisals,
-              Casualty Surveys.
-            </div>
-          </div>
-          <img src="assets/image2.png" alt="Inspection" class="service-img" />
-        </div>
-        <!-- Service Card 3 -->
-        <div class="service-card">
-          <img
-            src="assets/image3.png"
-            alt="Claims Management"
-            class="service-img"
-          />
-          <div class="service-info">
-            <div class="service-title">Claims Management</div>
-            <div class="service-desc">
-              Provide full claims management services, including: Claims
-              Settlement, Claims Consulting, Recovery and Subrogation, Salvage
-              Sales.
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- See More Button -->
-      <div class="services-more-btn-wrapper">
-        <a
-          href="services.html"
-          class="services-more-btn"
-          style="
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-          "
-        >
-          See More
-          <span class="see-more-arrow-wrapper">
-            <svg
-              class="see-more-arrow"
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#002699"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polyline points="8 5 16 12 8 19" />
-            </svg>
-          </span>
-        </a>
-      </div>
-    </section>
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  <script src="js/footer.js"></script>
 
-    <!-- Footer -->
-    <div id="footer-container"></div>
-    <script src="js/footer.js"></script>
+  <!-- Mobile Menu Script -->
+  <script src="js/script.js"></script>
+</body>
 
-    <!-- Mobile Menu Script -->
-    <script src="js/script.js"></script>
-  </body>
 </html>
