@@ -318,13 +318,29 @@ body {
 }
 
 .service-img {
-  width: 210px;
-  min-width: 210px;
-  height: 150px;
+  width: 360px;
+  max-width: 40%;
+  min-width: 240px;
+  height: auto;
   object-fit: cover;
-  border-radius: 2px;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
   flex-shrink: 0;
   box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .service-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-img {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: clamp(180px, 32vw, 360px);
+  }
 }
 
 .service-info {
@@ -358,40 +374,44 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 500px;
+  min-height: 450px;
 }
 
 .topservicepage .tsp-1 {
   max-width: 900px;
   margin: 0 auto;
-  padding: 130px 0 100px 0;
+  padding: 165px 0 100px 0;
 }
 
 .tsp-2 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 400;
+  padding: 0 70px;
+  margin: 3rem 0 0 0;
 }
 
 .tsp-3 {
-  font-size: 1.4rem;
-  font-weight: 300;
+  font-size: 1.1rem;
+  font-weight: 400;
   margin-top: 20px;
-  padding: 0 70px 0 100px;
-  line-height: 1.5;
+  padding: 0 70px;
+  line-height: 1.6;
 }
 
 .services-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 1000px;
-  margin: 50px 180px 50px auto;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 70px;
+  box-sizing: border-box;
 }
 
 .service-item {
   display: grid;
   grid-template-columns: 500px 400px;
-  gap: 80px;
+  gap: 50px;
   align-items: start;
 }
 
@@ -405,6 +425,7 @@ body {
   height: auto;
   object-fit: cover;
   border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
 .service-text h2 {
@@ -413,19 +434,19 @@ body {
 }
 
 .service-text p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 300;
 }
 
 .service-text ul {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 hr {
   border: none;
-  height: 3px;
+  height: 2px;
   width: 100%;
-  background-color: #eaf1f6;
+  background-color: #ecf8ff;
   margin: 20px 0;
 }
 
@@ -440,12 +461,14 @@ hr {
   }
 
   .tsp-2 {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
+    padding: 0 20px;
+    width: 100%;
   }
 
   .tsp-3 {
     font-size: 1.4rem;
-    padding: 0;
+    padding: 0 20px;
     width: 100%;
     text-align: left;
   }
@@ -453,6 +476,7 @@ hr {
   .services-container {
     margin: 30px 20px;
     max-width: 100%;
+    padding: 0 20px;
   }
 
   .service-item {
@@ -533,10 +557,10 @@ hr {
 }
 
 .tpa-1 {
-  font-size: 1.4rem;
-  font-weight: 300;
+  font-size: 1.1rem;
+  font-weight: 400;
   padding: 70px 0 100px 0;
-  line-height: 1.5;
+  line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -968,7 +992,7 @@ html {
 
 /* Body main color */
 body.body-main {
-  color: #000;
+  color: #333;
   font-family: "Poppins", "Inter", Arial, Helvetica, sans-serif;
   min-height: 100vh;
   display: flex;
@@ -2224,7 +2248,6 @@ body {
 
 .navbar ul {
   list-style: none;
-  margin: 0;
   padding: 0;
   display: flex;
   gap: 1.5rem;
