@@ -380,7 +380,7 @@ body {
 .topservicepage .tsp-1 {
   max-width: 900px;
   margin: 0 auto;
-  padding: 165px 0 100px 0;
+  padding: 130px 0 100px 0;
 }
 
 .tsp-2 {
@@ -453,7 +453,7 @@ hr {
 /* mobile css for service page */
 @media (max-width: 768px) {
   .topservicepage {
-    min-height: 400px;
+    min-height: 390px;
   }
 
   .topservicepage .tsp-1 {
@@ -559,7 +559,7 @@ hr {
 .tpa-1 {
   font-size: 1.1rem;
   font-weight: 400;
-  padding: 70px 0 100px 0;
+  padding: 70px 0 70px 0;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
@@ -609,7 +609,7 @@ hr {
 .tpa-2 {
   max-width: 700px;
   margin: 0 auto;
-  padding: 100px 0 50px 0;
+  padding: 70px 0 10px 0;
   font-size: 2.2rem;
   font-weight: 400;
 }
@@ -629,7 +629,7 @@ hr {
   max-width: 700px;
   margin: 0 auto;
   padding: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 
 /* mobile css for about page */
