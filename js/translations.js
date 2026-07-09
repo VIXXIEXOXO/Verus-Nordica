@@ -1,5 +1,9 @@
 let translations = {};
-let currentLanguage = localStorage.getItem("language") || "en";
+const supportedLanguages = ["en", "fi"];
+let currentLanguage = localStorage.getItem("language");
+if (!supportedLanguages.includes(currentLanguage)) {
+    currentLanguage = "en";
+}
 
 // Load translations
 async function loadTranslations() {
@@ -56,10 +60,11 @@ function getTranslation(key) {
 
 // Update language toggle button appearance
 function updateLanguageToggle() {
-    const langButtons = document.querySelectorAll('[href="#"][data-lang-toggle="true"]');
-    langButtons.forEach((btn) => {
-        btn.textContent = currentLanguage === "en" ? "FI / EN" : "FI / EN";
-        btn.style.fontWeight = "600";
+    document.querySelectorAll('[data-lang-toggle="true"]').forEach((btn) => {
+        const lang = btn.getAttribute("data-lang");
+        const isActive = lang === currentLanguage;
+        btn.classList.toggle("active", isActive);
+        btn.classList.toggle("inactive", !isActive);
     });
 }
 
@@ -72,36 +77,18 @@ function switchLanguage(lang) {
     }
 }
 
-// Toggle between languages
-function toggleLanguage() {
-    switchLanguage(currentLanguage === "en" ? "fi" : "en");
-}
-
 // Add event listeners to language toggle buttons
 document.addEventListener("DOMContentLoaded", function () {
     loadTranslations();
 
-    // Desktop language toggle
-    const desktopLangBtn = document.querySelector(
-        '.navbar-links li:last-child a'
-    );
-    if (desktopLangBtn) {
-        desktopLangBtn.addEventListener("click", function (e) {
+    document.querySelectorAll('[data-lang-toggle="true"]').forEach((btn) => {
+        btn.addEventListener("click", function (e) {
             e.preventDefault();
-            toggleLanguage();
+            const lang = btn.getAttribute("data-lang");
+            if (lang) {
+                switchLanguage(lang);
+            }
         });
-        desktopLangBtn.style.cursor = "pointer";
-    }
-
-    // Mobile language toggle
-    const mobileLangBtn = document.querySelector(
-        '.mobile-nav-links li:last-child a'
-    );
-    if (mobileLangBtn) {
-        mobileLangBtn.addEventListener("click", function (e) {
-            e.preventDefault();
-            toggleLanguage();
-        });
-        mobileLangBtn.style.cursor = "pointer";
-    }
+        btn.style.cursor = "pointer";
+    });
 });

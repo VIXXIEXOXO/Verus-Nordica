@@ -148,6 +148,38 @@ body {
   background: #012182;
 }
 
+.navbar-links li.language-toggle,
+.mobile-nav-links li.language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navbar-links li.language-toggle a,
+.mobile-nav-links li.language-toggle a {
+  color: #888;
+  font-weight: 500;
+}
+
+.navbar-links li.language-toggle a.active,
+.mobile-nav-links li.language-toggle a.active {
+  color: #333333;
+}
+
+.mobile-nav-links li.language-toggle a.active {
+  color: #ffffff;
+}
+
+.navbar-links li.language-toggle a.inactive,
+.mobile-nav-links li.language-toggle a.inactive {
+  color: #888;
+}
+
+.navbar-links li.language-toggle .lang-divider,
+.mobile-nav-links li.language-toggle .lang-divider {
+  color: #888;
+}
+
 .navbar ul {
   list-style: none;
   margin: 0;
