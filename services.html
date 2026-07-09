@@ -10,6 +10,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Momo+Trust+Display:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="js/translations.js"></script>
 </head>
 
 <body class="body-main">
@@ -34,16 +35,16 @@
       </button>
       <ul class="mobile-nav-links">
         <li>
-          <a href="index.html" onclick="closeMobileMenu()">Home</a>
+          <a href="index.html" onclick="closeMobileMenu()" data-i18n="nav.home">Home</a>
         </li>
-        <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+        <li><a href="about.html" onclick="closeMobileMenu()" data-i18n="nav.about">About</a></li>
         <li>
-          <a href="services.html" onclick="closeMobileMenu()">Services</a>
+          <a href="services.html" onclick="closeMobileMenu()" data-i18n="nav.services">Services</a>
         </li>
         <li>
-          <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+          <a href="contact.html" onclick="closeMobileMenu()" data-i18n="nav.contact">Contact</a>
         </li>
-        <li><a href="#" onclick="closeMobileMenu()">FI / EN</a></li>
+        <li><a href="#" onclick="closeMobileMenu()" data-i18n="nav.language">FI / EN</a></li>
       </ul>
     </div>
   </div>
@@ -52,19 +53,19 @@
     <span class="navbar-brand"><img src="assets/logo.svg" alt="Logo Icon" class="logo-img" />
       <span class="brand-poppins">Verus Nordica</span></span>
     <ul class="navbar-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html" class="active-link">Services</a></li>
-      <li><a href="#">FI/EN</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="services.html" class="active-link" data-i18n="nav.services">Services</a></li>
+      <li><a href="#" data-i18n="nav.language">FI/EN</a></li>
     </ul>
-    <a href="contact.html" class="navbar-contact">Contact</a>
+    <a href="contact.html" class="navbar-contact" data-i18n="nav.contact">Contact</a>
   </nav>
 
   <!-- SERVICES BODY CONTENT GOES HERE -->
   <section class="topservicepage">
     <div class="tsp-1">
-      <h1 class="tsp-2">Services</h1>
-      <p class="tsp-3">
+      <h1 class="tsp-2" data-i18n="services.title">Services</h1>
+      <p class="tsp-3" data-i18n="services.intro">
         In addition to inspection and supervision, we conduct thorough surveys
         and drug and alcohol testing, leading to claims management.
       </p>
@@ -76,18 +77,18 @@
       <div>
         <div class="service-item">
           <div class="service-text">
-            <h2>Inspection & Supervision</h2>
-            <p>
+            <h2 data-i18n="services.service1Title">Inspection & Supervision</h2>
+            <p data-i18n="services.service1Desc">
               Professional and independent inspection and supervision services
               for cargo and vessel operations. In addition, verify cargo
               condition and quantity prior to loading and offer real-time
               supervision during loading and unloading operations.
             </p>
             <ul>
-              <li>Marine Cargo</li>
-              <li>Condition Appraisal</li>
-              <li>Loss Prevention</li>
-              <li>Pre-Risk Inspection</li>
+              <li data-i18n="services.service1Item1">Marine Cargo</li>
+              <li data-i18n="services.service1Item2">Condition Appraisal</li>
+              <li data-i18n="services.service1Item3">Loss Prevention</li>
+              <li data-i18n="services.service1Item4">Pre-Risk Inspection</li>
             </ul>
           </div>
           <img class="service-img" src="assets/image1.png" alt="Inspection and Supervision" />
@@ -98,14 +99,14 @@
       <div>
         <div class="service-item">
           <div class="service-text">
-            <h2>Survey</h2>
-            <p>Perform comprehensive marine surveys, including:</p>
+            <h2 data-i18n="services.service2Title">Survey</h2>
+            <p data-i18n="services.service2Desc">Perform comprehensive marine surveys, including:</p>
             <ul>
-              <li>Marine Cargo</li>
-              <li>P&I (Protection & Indemnity) Surveys</li>
-              <li>Loss Prevention Surveys</li>
-              <li>Condition Appraisals</li>
-              <li>Casualty Surveys</li>
+              <li data-i18n="services.service2Item1">Marine Cargo</li>
+              <li data-i18n="services.service2Item2">P&I (Protection & Indemnity) Surveys</li>
+              <li data-i18n="services.service2Item3">Loss Prevention Surveys</li>
+              <li data-i18n="services.service2Item4">Condition Appraisals</li>
+              <li data-i18n="services.service2Item5">Casualty Surveys</li>
             </ul>
           </div>
           <img class="service-img" src="assets/image2.png" alt="Survey" />
@@ -116,13 +117,13 @@
       <div>
         <div class="service-item">
           <div class="service-text">
-            <h2>Claims Management</h2>
-            <p>Provide full claims management services, including:</p>
+            <h2 data-i18n="services.service3Title">Claims Management</h2>
+            <p data-i18n="services.service3Desc">Provide full claims management services, including:</p>
             <ul>
-              <li>Claims Settlement</li>
-              <li>Claims Consulting</li>
-              <li>Recovery and Subrogation</li>
-              <li>Salvage Sales</li>
+              <li data-i18n="services.service3Item1">Claims Settlement</li>
+              <li data-i18n="services.service3Item2">Claims Consulting</li>
+              <li data-i18n="services.service3Item3">Recovery and Subrogation</li>
+              <li data-i18n="services.service3Item4">Salvage Sales</li>
             </ul>
           </div>
           <img class="service-img" src="assets/image3.png" alt="Claims Management" />
@@ -132,16 +133,16 @@
       <!-- Service Item 4 -->
       <div class="service-item">
         <div class="service-text">
-          <h2>Drug and Alcohol Testing</h2>
-          <p>
+          <h2 data-i18n="services.service4Title">Drug and Alcohol Testing</h2>
+          <p data-i18n="services.service4Desc">
             Drug and alcohol testing services for the maritime and transport
             industries. Testing is conducted on-site at shipyards, ports,
             terminals and other operational locations.
           </p>
           <ul>
-            <li>Pre-employment Screening</li>
-            <li>Random Testing</li>
-            <li>Post-incident Testing</li>
+            <li data-i18n="services.service4Item1">Pre-employment Screening</li>
+            <li data-i18n="services.service4Item2">Random Testing</li>
+            <li data-i18n="services.service4Item3">Post-incident Testing</li>
           </ul>
         </div>
         <img class="service-img" src="assets/image4.png" alt="Drug tests" />
