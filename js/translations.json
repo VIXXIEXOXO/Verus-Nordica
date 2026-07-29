@@ -14,7 +14,9 @@
             "aboutContent": "We act as independent surveyors for the benefit <br />of our principals, delivering impartial and<br />professional assessments",
             "seeMore": "See More",
             "servicesTitle": "Services",
-            "servicesSubtitle": "Experienced professionals offer a wide range of average and survey agency services."
+            "servicesSubtitle": "Experienced professionals offer a wide range of average and survey agency services.",
+            "service2FullDesc": "Perform comprehensive marine surveys, including: Marine Cargo Surveys, P&I (Protection & Indemnity) Surveys, H&M (Hull & Machinery) Surveys, Loss Prevention Surveys, Condition Appraisals, Casualty Surveys.",
+            "service3FullDesc": "Provide full claims management services, including: Claims Settlement, Claims Consulting, Recovery and Subrogation, Salvage Sales."
         },
         "about": {
             "title": "About",
@@ -108,7 +110,9 @@
             "aboutContent": "Toimimme itsenäisinä peritikoina asiakkaidemme hyväksi,<br />tarjoten puolueettomia ja<br />ammattimaisia arvioita",
             "seeMore": "Lue lisää",
             "servicesTitle": "Palvelut",
-            "servicesSubtitle": "Kokeneet ammattilaiset tarjoavat laajan valikoiman keskiarvo- ja peritapalveluja."
+            "servicesSubtitle": "Kokeneet ammattilaiset tarjoavat laajan valikoiman keskiarvo- ja peritapalveluja.",
+            "service2FullDesc": "Kattavat meritutkinnat, mukaan lukien: merikargo, P&I (suoja ja korvaus) -tutkinnat, runko- ja koneistotutkinnat, vahinkojen ehkaysyn tutkinnat, kuntoarviot ja onnettomuustutkinnat.",
+            "service3FullDesc": "Tarjoamme kattavat korvaustenhallintapalvelut, mukaan lukien: korvausten ratkaiseminen, korvausneuvonta, palautus ja takaisinperinta seka salvagen myynti."
         },
         "about": {
             "title": "Tietoja",
