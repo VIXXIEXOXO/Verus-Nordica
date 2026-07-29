@@ -1366,6 +1366,18 @@ body.body-main {
     text-align: center;
   }
 
+  .contact-intro,
+  .contact-intro-merged,
+  .contact-intro-1,
+  .contact-intro-2 {
+    text-align: left !important;
+    width: auto !important;
+    margin-left: 1.5vw !important;
+    margin-right: 3.5vw !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   .hero-image-wrapper {
     min-height: 180px;
   }
