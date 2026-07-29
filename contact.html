@@ -82,7 +82,7 @@
           <a href="mailto:visa.riihimaki@verusnordica.fi" class="contact-email-link">visa.riihimaki@verusnordica.fi</a>
         </div>
       </div>
-      <form class="contact-form" action="https://formspree.io/f/mojbygbo" method="POST">
+      <form class="contact-form" action="https://formspree.io/f/mojbygbo" method="POST" novalidate>
         <div class="contact-form-row">
           <div class="field-wrapper contact-field-wrapper">
             <label for="name" class="contact-field-label" data-i18n="contact.nameLabel">Name</label>
@@ -120,16 +120,45 @@
             var form = document.querySelector(".contact-form");
             var fields = form.querySelectorAll("input[required], textarea[required]");
 
+            function isFieldFilledCorrectly(field) {
+              return !!field.value.trim() && field.checkValidity();
+            }
+
+            function setFieldState(field, state) {
+              var icon = field.parentElement.querySelector(".field-checkmark");
+
+              if (state === "valid") {
+                field.classList.remove("invalid-field");
+                field.classList.add("valid-field");
+                if (icon) {
+                  icon.textContent = "✔";
+                }
+                return;
+              }
+
+              if (state === "invalid") {
+                field.classList.remove("valid-field");
+                field.classList.add("invalid-field");
+                if (icon) {
+                  icon.textContent = "✖";
+                }
+                return;
+              }
+
+              field.classList.remove("invalid-field", "valid-field");
+              if (icon) {
+                icon.textContent = "✔";
+              }
+            }
+
             function validateFields() {
               var valid = true;
               fields.forEach(function (field) {
-                if (!field.value.trim()) {
-                  field.classList.add("invalid-field");
-                  field.classList.remove("valid-field");
+                if (!isFieldFilledCorrectly(field)) {
+                  setFieldState(field, "invalid");
                   valid = false;
                 } else {
-                  field.classList.remove("invalid-field");
-                  field.classList.add("valid-field");
+                  setFieldState(field, "valid");
                 }
               });
               return valid;
@@ -142,11 +171,12 @@
 
             fields.forEach(function (field) {
               field.addEventListener("input", function () {
-                if (field.value.trim()) {
-                  field.classList.remove("invalid-field");
-                  field.classList.add("valid-field");
+                if (!field.value.trim()) {
+                  setFieldState(field, "neutral");
+                } else if (isFieldFilledCorrectly(field)) {
+                  setFieldState(field, "valid");
                 } else {
-                  field.classList.remove("valid-field");
+                  setFieldState(field, "invalid");
                 }
                 if (successMsg) {
                   successMsg.style.display = "none";
@@ -175,7 +205,7 @@
                 setTimeout(function () {
                   form.reset();
                   fields.forEach(function (field) {
-                    field.classList.remove("invalid-field", "valid-field");
+                    setFieldState(field, "neutral");
                   });
                   if (successMsg) {
                     successMsg.style.display = "block";

@@ -27,7 +27,6 @@
 .contact-form input.invalid-field,
 .contact-form textarea.invalid-field {
   border-color: #d93025 !important;
-  box-shadow: inset 0 0 0 1px #d93025;
   background: #fff3f3 !important;
 }
 
@@ -48,12 +47,18 @@
 
 .contact-form input.valid-field,
 .contact-form textarea.valid-field {
-  box-shadow: inset 0 0 0 1px #0f9d58;
+  border-color: #0f9d58 !important;
 }
 
 .contact-form input.valid-field+.field-checkmark,
 .contact-form textarea.valid-field+.field-checkmark {
   opacity: 1;
+}
+
+.contact-form input.invalid-field+.field-checkmark,
+.contact-form textarea.invalid-field+.field-checkmark {
+  opacity: 1;
+  color: #d93025;
 }
 
 html,
@@ -355,9 +360,15 @@ body {
 .contact-textarea {
   padding: 0.7rem;
   border-radius: 6px;
-  border: 1px solid #eaf4fa;
-  background: #eaf4fa;
+  border: 2px solid #E2F2F4;
+  background: #E2F2F4;
   font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+}
+
+.contact-input:hover:not(.valid-field):not(.invalid-field),
+.contact-textarea:hover:not(.valid-field):not(.invalid-field) {
+  border-color: #009FBB;
 }
 
 .contact-textarea {
@@ -400,7 +411,7 @@ body {
 
 /* ================= 6. Services Section ================= */
 .services-section {
-  background: #ecf8ff;
+  background: #E2F2F4;
   position: relative;
   padding: 5rem 0;
   margin: 0;
@@ -588,7 +599,7 @@ hr {
   border: none;
   height: 2px;
   width: 100%;
-  background-color: #ecf8ff;
+  background-color: #E2F2F4;
   margin: 20px 0;
 }
 
@@ -708,7 +719,7 @@ hr {
 }
 
 .info {
-  background: #ecf8ff;
+  background: #E2F2F4;
   max-width: 700px;
   margin: 0 auto;
   border-radius: 5px;
@@ -932,9 +943,9 @@ hr {
     max-width: 260px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    border: 1.5px solid #002699 !important;
-    background: #fff !important;
-    color: #333333 !important;
+    border: none !important;
+    background: #002699 !important;
+    color: #fff !important;
     font-size: 0.7rem !important;
     font-weight: 500 !important;
     font-family: "Poppins", "Inter", Arial, Helvetica, sans-serif !important;
@@ -962,9 +973,9 @@ hr {
   justify-content: center;
   margin: 0 auto 0 auto;
   padding: 0.85rem 2.5rem;
-  background: #fff;
-  color: #333333;
-  border: 1.5px solid #002699;
+  background: #002699;
+  color: #fff;
+  border: none;
   border-radius: 3px;
   font-size: 0.7rem;
   font-weight: 500;
@@ -978,7 +989,7 @@ hr {
 }
 
 .send-message-btn:hover {
-  background: #002699;
+  background: #009fbb;
   color: #fff;
 }
 
@@ -1853,7 +1864,7 @@ body.body-main {
 
 /* Services Section */
 .services-section {
-  background: #ecf8ff;
+  background: #E2F2F4;
   position: relative;
   padding: 5rem 0;
   margin: 0;
