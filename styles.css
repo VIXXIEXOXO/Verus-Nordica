@@ -185,7 +185,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 1.5rem;
+  gap: 2.0rem;
 }
 
 .navbar a {
@@ -2176,7 +2176,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 580px;
+  max-width: 520px;
   display: flex;
   justify-content: space-between;
   background: rgba(255, 255, 255);
