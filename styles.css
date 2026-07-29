@@ -123,6 +123,21 @@ body {
     color 0.2s;
 }
 
+.navbar-links li a:hover {
+  color: #009fbb;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+.navbar-links li a.active-link,
+.navbar-links li a[aria-current="page"] {
+  color: #002792;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
 .navbar-lang {
   color: #888;
   font-size: 1.1rem;
@@ -145,7 +160,7 @@ body {
 }
 
 .navbar-contact:hover {
-  background: #012182;
+  background: #009fbb;
 }
 
 .navbar-links li.language-toggle,
@@ -1978,13 +1993,13 @@ body.body-main {
   min-width: 260px;
   margin: 0 auto 0 auto;
   padding: 0.85rem 2.5rem;
-  background: #fff;
-  color: #333333;
-  border: 1.5px solid #002699;
+  background: #002699;
+  color: #fff;
   border-radius: 3px;
   font-size: 0.7rem;
   font-weight: 500;
   font-family: "Poppins", "Inter", Arial, Helvetica, sans-serif;
+  text-decoration: none;
   cursor: pointer;
   transition:
     background 0.2s,
@@ -1993,8 +2008,9 @@ body.body-main {
 
 .see-more-btn:hover,
 .services-more-btn:hover {
-  background: #002699;
+  background: #009fbb;
   color: #fff;
+  text-decoration: none;
 }
 
 .see-more-btn .chevron,
@@ -2366,6 +2382,21 @@ body {
     color 0.2s;
 }
 
+.navbar-links li a:hover {
+  color: #009fbb;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+.navbar-links li a.active-link,
+.navbar-links li a[aria-current="page"] {
+  color: #002792;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
 .navbar-lang {
   color: #888;
   font-size: 1.1rem;
@@ -2388,7 +2419,7 @@ body {
 }
 
 .navbar-contact:hover {
-  background: #012182;
+  background: #009fbb;
 }
 
 .navbar ul {
@@ -2714,6 +2745,7 @@ main {
   display: inline-block;
   vertical-align: middle;
   margin-left: 0;
+  stroke: #fff;
   transition: stroke 0.2s;
 }
 
@@ -2727,18 +2759,23 @@ main {
   min-width: 170px;
   margin-left: auto;
   margin-right: auto;
-  border: 1.5px solid #002699;
-  background: #fff;
-  color: #333333;
+  background: #002699;
+  color: #fff;
   font-size: 0.7rem;
   font-weight: 500;
   font-family: "Poppins", "Inter", Arial, Helvetica, sans-serif;
+  text-decoration: none;
   cursor: pointer;
   transition:
     background 0.2s,
     color 0.2s;
   justify-content: center;
   padding: 0.85rem 2.5rem;
+}
+
+.see-more-btn:hover,
+.services-more-btn:hover {
+  text-decoration: none;
 }
 
 .see-more-arrow-wrapper {
