@@ -271,6 +271,101 @@ body {
   flex: 1 0 auto;
 }
 
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 130px 0 100px 0;
+}
+
+.contact-section-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.contact-info {
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.contact-info-line {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 400;
+}
+
+.contact-phone-value {
+  color: #002699;
+  font-weight: 400;
+}
+
+.contact-email-link {
+  color: #002699;
+  text-decoration: none;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 12px;
+}
+
+.contact-form-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-field-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.contact-field-label {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.contact-input,
+.contact-textarea {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #eaf4fa;
+  background: #eaf4fa;
+  font-size: 0.9rem;
+}
+
+.contact-textarea {
+  font-family: "Poppins", "Inter", Arial, Helvetica, sans-serif;
+}
+
+.contact-submit {
+  margin-top: 0.5rem;
+}
+
+.contact-success {
+  display: none;
+  color: green;
+  margin: 1rem auto 0;
+  text-align: center;
+  max-width: 500px;
+  width: fit-content;
+}
+
+.index-about-title {
+  text-align: center;
+}
+
 /* ================= 5. About Section ================= */
 .about-centered-text {
   text-align: center;
@@ -638,6 +733,21 @@ hr {
   font-weight: 400;
 }
 
+.about-contact-value {
+  color: #002699;
+  font-weight: 400;
+}
+
+.about-contact-label {
+  color: #333;
+}
+
+.about-contact-link {
+  color: #002699;
+  text-decoration: none;
+  font-weight: 400;
+}
+
 .tpa-2 {
   max-width: 700px;
   margin: 0 auto;
@@ -758,13 +868,13 @@ hr {
     gap: 0.8rem !important;
   }
 
-  .contact-form>div[style*="display: flex;"][style*="gap: 1rem;"] {
+  .contact-form-row {
     flex-direction: column !important;
     gap: 0.5rem !important;
   }
 
-  .contact-form input,
-  .contact-form textarea {
+  .contact-input,
+  .contact-textarea {
     font-size: 1rem !important;
     padding: 0.6rem !important;
     font-family: "Poppins", "Inter", Arial, Helvetica, sans-serif !important;
@@ -778,7 +888,7 @@ hr {
     padding: 0.7rem 1.2rem !important;
   }
 
-  .contact-section h1 {
+  .contact-section-title {
     font-size: clamp(2rem, 9vw, 2.8rem) !important;
     text-align: left !important;
     margin-left: 0.5vw !important;
@@ -786,13 +896,6 @@ hr {
 }
 
 /* ...existing code... */
-
-.contact-section p {
-  font-size: 1.1rem !important;
-  width: 95vw !important;
-  margin: 0 auto 1.2rem auto !important;
-}
-
 /* ================= 8. Contact Section ================= */
 
 @media (max-width: 430px) {
@@ -829,7 +932,7 @@ hr {
     border-radius: 3px !important;
   }
 
-  .contact-section h1 {
+  .contact-section-title {
     font-size: clamp(2rem, 9vw, 2.8rem) !important;
     text-align: left !important;
     margin-left: 2.5vw !important;
