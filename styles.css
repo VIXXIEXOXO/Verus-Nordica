@@ -582,7 +582,7 @@ body {
 }
 
 .service-text h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 400;
 }
 
@@ -666,47 +666,13 @@ hr {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 600px;
+  min-height: 450px;
 }
 
 .topaboutpage .tsp-1 {
   max-width: 900px;
   margin: 0 auto;
   padding: 130px 0 100px 0;
-}
-
-.carousel {
-  width: 100%;
-  overflow: hidden;
-  padding: 0;
-  margin-top: -150px;
-  position: relative;
-  z-index: 2;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 50px;
-  width: max-content;
-  animation: scroll 30s linear infinite;
-}
-
-.carousel-track img {
-  width: 35vw;
-  height: 50vh;
-  object-fit: cover;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-50% - 5px));
-  }
 }
 
 .tpa-1 {
@@ -736,10 +702,10 @@ hr {
 .info-grid {
   display: grid;
   grid-template-columns: 150px 1fr;
-  gap: 15px 100px;
-  padding-left: 35px;
-  max-width: 600px;
-  margin-bottom: 2rem;
+  gap: 15px 65px;
+  padding-left: 0;
+  max-width: 100%;
+  margin: 0 auto 2rem;
 }
 
 .label {
@@ -762,6 +728,11 @@ hr {
 .about-contact-value {
   color: #002699;
   font-weight: 400;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
 }
 
 .about-contact-label {
@@ -772,14 +743,16 @@ hr {
   color: #002699;
   text-decoration: none;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .tpa-2 {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 70px 0 10px 0;
+  padding: 70px 70px 10px;
   font-size: 2.2rem;
   font-weight: 400;
+  text-align: center;
 }
 
 .section-img {
@@ -794,10 +767,9 @@ hr {
 }
 
 .info-1 {
-  max-width: 700px;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 20px;
-  padding-bottom: 60px;
+  padding: 20px 0 60px;
 }
 
 /* mobile css for about page */
@@ -818,20 +790,6 @@ hr {
   .tsp-3 {
     font-size: 1rem;
     line-height: 1.6;
-  }
-
-  .carousel {
-    margin-top: -80px;
-  }
-
-  .carousel-track {
-    gap: 20px;
-    margin-top: 4rem;
-  }
-
-  .carousel-track img {
-    width: 80vw;
-    height: 250px;
   }
 
   .tpa-1 {
@@ -859,6 +817,10 @@ hr {
   .label,
   .value {
     text-align: left;
+  }
+
+  .about-contact-value {
+    justify-content: flex-start;
   }
 
   .label {
