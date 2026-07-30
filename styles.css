@@ -702,10 +702,10 @@ hr {
 .info-grid {
   display: grid;
   grid-template-columns: 150px 1fr;
-  gap: 15px 65px;
+  gap: 8px 65px;
   padding-left: 0;
   max-width: 100%;
-  margin: 0 auto 2rem;
+  margin: 0 0 2rem;
 }
 
 .label {
@@ -714,6 +714,20 @@ hr {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.member-name {
+  font-size: 1.8rem;
+  line-height: 1.05;
+  color: #2f3338;
+  white-space: nowrap;
+}
+
+.member-role {
+  font-size: 1rem;
+  line-height: 1.15;
+  color: #009FBB;
+  white-space: nowrap;
 }
 
 .info-icon {
@@ -757,7 +771,7 @@ hr {
 
 .section-img {
   width: 100%;
-  max-width: 500px;
+  max-width: 530px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -767,7 +781,7 @@ hr {
 }
 
 .info-1 {
-  max-width: 500px;
+  max-width: 530px;
   margin: 0 auto;
   padding: 20px 0 60px;
 }
@@ -810,7 +824,7 @@ hr {
 
   .info-grid {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 2px;
     padding-left: 0;
   }
 
@@ -820,12 +834,46 @@ hr {
   }
 
   .about-contact-value {
+    display: block;
     justify-content: flex-start;
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  .about-contact-label {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .about-contact-link {
+    display: block;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .label {
     font-weight: 400;
     margin-top: 10px;
+  }
+
+  .member-name {
+    font-size: 1.8rem;
+    order: 1;
+  }
+
+  .member-role {
+    font-size: 1.2rem;
+    order: 2;
+    margin-bottom: 2rem;
+  }
+
+  .tel-row {
+    order: 3;
+    margin-bottom: 0.6rem;
+  }
+
+  .email-row {
+    order: 4;
   }
 
   .tpa-2 {
@@ -846,19 +894,28 @@ hr {
 /* ================= CONTACT PAGE RESPONSIVE STYLES ================= */
 @media (max-width: 770px) {
   .contact-section {
-    padding: 80px 0 40px 0 !important;
-    max-width: 98vw !important;
-    margin: 0 1vw !important;
+    padding: 80px 1rem 40px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
   }
 
   .contact-form {
-    padding: 1rem !important;
-    gap: 0.8rem !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 1rem !important;
+  }
+
+  .contact-intro-merged,
+  .contact-info {
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .contact-form-row {
     flex-direction: column !important;
-    gap: 0.5rem !important;
+    gap: 1rem !important;
   }
 
   .contact-input,
@@ -879,7 +936,7 @@ hr {
   .contact-section-title {
     font-size: clamp(2rem, 9vw, 2.8rem) !important;
     text-align: left !important;
-    margin-left: 0.5vw !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -888,11 +945,11 @@ hr {
 
 @media (max-width: 430px) {
   .contact-section {
-    padding: 60px 0 35px 0 !important;
+    padding: 60px 1rem 35px !important;
   }
 
   .contact-form {
-    padding: 0.5rem !important;
+    padding: 0 !important;
   }
 
   .send-message-btn {
@@ -923,7 +980,7 @@ hr {
   .contact-section-title {
     font-size: clamp(2rem, 9vw, 2.8rem) !important;
     text-align: left !important;
-    margin-left: 2.5vw !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -933,7 +990,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 0 auto;
+  margin: 1.2rem auto 0 auto;
   padding: 0.85rem 2.5rem;
   background: #002699;
   color: #fff;
@@ -1333,9 +1390,9 @@ body.body-main {
   .contact-intro-1,
   .contact-intro-2 {
     text-align: left !important;
-    width: auto !important;
-    margin-left: 1.5vw !important;
-    margin-right: 3.5vw !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -1519,6 +1576,8 @@ body.body-main {
     font-size: 0.7rem;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
   }
 
   .service-card {
