@@ -579,6 +579,7 @@ body {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 2rem;
+  margin-top: 2.5rem;
 }
 
 .service-text h2 {
