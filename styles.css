@@ -50,13 +50,13 @@
   border-color: #0f9d58 !important;
 }
 
-.contact-form input.valid-field+.field-checkmark,
-.contact-form textarea.valid-field+.field-checkmark {
+.contact-form input.valid-field + .field-checkmark,
+.contact-form textarea.valid-field + .field-checkmark {
   opacity: 1;
 }
 
-.contact-form input.invalid-field+.field-checkmark,
-.contact-form textarea.invalid-field+.field-checkmark {
+.contact-form input.invalid-field + .field-checkmark,
+.contact-form textarea.invalid-field + .field-checkmark {
   opacity: 1;
   color: #d93025;
 }
@@ -205,7 +205,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 2.0rem;
+  gap: 2rem;
 }
 
 .navbar a {
@@ -360,15 +360,15 @@ body {
 .contact-textarea {
   padding: 0.7rem;
   border-radius: 6px;
-  border: 2px solid #E2F2F4;
-  background: #E2F2F4;
+  border: 2px solid #e2f2f4;
+  background: #e2f2f4;
   font-size: 0.9rem;
   transition: border-color 0.2s ease;
 }
 
 .contact-input:hover:not(.valid-field):not(.invalid-field),
 .contact-textarea:hover:not(.valid-field):not(.invalid-field) {
-  border-color: #009FBB;
+  border-color: #009fbb;
 }
 
 .contact-textarea {
@@ -411,7 +411,7 @@ body {
 
 /* ================= 6. Services Section ================= */
 .services-section {
-  background: #E2F2F4;
+  background: #e2f2f4;
   position: relative;
   padding: 5rem 0;
   margin: 0;
@@ -600,7 +600,7 @@ hr {
   border: none;
   height: 2px;
   width: 100%;
-  background-color: #E2F2F4;
+  background-color: #e2f2f4;
   margin: 20px 0;
 }
 
@@ -686,7 +686,7 @@ hr {
 }
 
 .info {
-  background: #E2F2F4;
+  background: #e2f2f4;
   max-width: 700px;
   margin: 0 auto;
   border-radius: 5px;
@@ -727,7 +727,7 @@ hr {
 .member-role {
   font-size: 1rem;
   line-height: 1.15;
-  color: #009FBB;
+  color: #009fbb;
   white-space: nowrap;
 }
 
@@ -1905,12 +1905,12 @@ body.body-main {
 
 /* Services Section */
 .services-section {
-  background: #E2F2F4;
-  position: relative;
-  padding: 5rem 0;
-  margin: 0;
+  background-image: url("assets/Backdrop3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2.5rem 0 3rem 0;
   width: 100%;
-  z-index: 1;
 }
 
 .services-section h2,
@@ -1938,7 +1938,6 @@ body.body-main {
 }
 
 @media (max-width: 700px) {
-
   .services-section h2,
   .services-subtitle {
     padding-left: 1.2rem;
